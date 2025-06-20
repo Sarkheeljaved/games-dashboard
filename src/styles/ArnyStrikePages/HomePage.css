@@ -1,0 +1,296 @@
+.wrapper {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: none;
+}
+
+.lens-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(22, 22, 22);
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 9998;
+    cursor: none;
+}
+
+.lenz {
+    width: 600px;
+    height: 600px;
+}
+
+
+
+/* //////////////////////////////// */
+
+.myArmy-Boundary {
+    width: max-content;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.topwall,
+.bottomwall {
+    width: 30%;
+    object-fit: contain;
+}
+
+.army-cover {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.army {
+    width: 95%;
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: end;
+    gap: 20px;
+    z-index: 3;
+}
+
+.power_cover {
+    width: 10%;
+    display: flex;
+    justify-self: center;
+    align-items: end
+}
+
+.myarmyimg,
+.sign {
+    width: 50px;
+    height: 50px;
+}
+
+.cage {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cageBody {
+    width: 100%;
+    height: 150px;
+
+}
+
+.cage-army-cover {
+    position: absolute;
+    left: 12%;
+    bottom: 20px;
+    width: 76%;
+    height: 82px;
+    background-color: #ffffff38;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: end;
+}
+
+.cage-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: start;
+}
+
+
+
+.cage .electricshocksign {
+    width: 50px;
+    height: 25px;
+}
+
+.enemy {
+    position: relative;
+    width: 60px;
+    height: 80px;
+    z-index: 3;
+}
+
+.health-bar-container {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+    z-index: 5;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.myarmyhealth-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+.myarmyhealth-bar.critical {
+    background-color: #4caf4f4d;
+}
+
+.enemyhealth-bar {
+    height: 100%;
+    background-color: #f44336;
+    transition: width 0.3s;
+}
+
+.enemyhealth-bar.critical {
+    background-color: #f4433649;
+}
+
+/* //////////////////////////////// */
+/* ////////////////group component //////////////////////// */
+.walllprotectioncover {
+    position: relative;
+    margin-left: 50px;
+    width: 200px;
+    z-index: 10;
+}
+
+.walllprotectioncover .walllprotection {
+    width: 200px;
+    height: 180px;
+}
+
+.walllprotectioncover .rocketlauncher {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -15px;
+}
+
+.walllprotectioncover .rocketlauncher2 {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -15px;
+}
+
+.walllprotectioncover .securityarmy {
+    position: absolute;
+    bottom: 20px;
+    margin-top: -25px;
+    width: 200px;
+
+}
+
+.securitymyarmyimg {
+    width: 50%;
+    height: 100px;
+}
+
+/* ////////////////////////////////////// */
+/* //////////////////mujahid group //////////////////// */
+/* Add these styles to your existing CSS */
+
+.mujah-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 10px;
+    z-index: 5;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: none;
+}
+
+.mujah-group:hover {
+    animation: blink-shadow 1s infinite;
+}
+
+@keyframes blink-shadow {
+    0% {
+        box-shadow: 0px 0px 0px 5px #d80606e8 inset;
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px 5px #d8060654 inset;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 5px #d80606e8 inset;
+    }
+}
+
+
+.mujah-soldier {
+    width: 40px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.mujah-sign {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* ////////////////////////////////////// */
+
+@media (max-width:768px) {
+    .lenz {
+        width: 200px;
+        height: 200px;
+    }
+
+    .mujah-group {
+        display: flex;
+        align-items: end;
+        gap: 0px;
+        z-index: 5;
+    }
+
+    .mujah-soldier {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    .mujah-sign {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+}

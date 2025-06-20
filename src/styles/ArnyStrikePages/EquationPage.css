@@ -1,0 +1,56 @@
+#mujahid-detail-group .mujah-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 10px;
+    z-index: 5;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: auto;
+}
+
+#mujahid-detail-group .mujah-group:hover {
+    animation: blink-shadow 1s infinite;
+}
+
+@keyframes blink-shadow {
+    0% {
+        box-shadow: 0px 0px 0px 5px #d80606e8 inset;
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px 5px #d8060654 inset;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 5px #d80606e8 inset;
+    }
+}
+
+.Bullet-Card {
+    width: 16rem;
+    border-radius: 15px;
+    border-color: #D49600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.Bullet-Card:hover {
+    animation: blink-Bullet-Cardshadow 1s infinite;
+}
+
+@keyframes blink-Bullet-Cardshadow {
+    0% {
+        box-shadow: 0px 0px 0px 5px #D49600 inset;
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px 5px #d4940079 inset;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 5px #D49600 inset;
+    }
+}

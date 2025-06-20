@@ -1,0 +1,234 @@
+.FishInOcean-fish-covr {
+    width: 100%;
+    height: 100vh;
+    background: url(/background.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.FishInOcean-left-side-cover,
+.FishInOcean-right-side-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    will-change: transform, left, top, opacity;
+    transition:
+        left 0.8s ease-out,
+        top 0.8s ease-out,
+        opacity 0.5s ease-out;
+}
+
+.FishInOcean-left-side-cover {
+    left: 5%;
+}
+
+.FishInOcean-right-side-cover {
+    right: 0%;
+    opacity: 0;
+}
+
+.FishInOcean-fish-defeated {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.5s ease-out;
+}
+
+
+
+.FishInOcean-calculations-container {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.FishInOcean-calculation-label,
+.FishInOcean-dark-calculation-label {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde49c;
+    border-radius: 50%;
+}
+
+.FishInOcean-calculation-label .value {
+    color: #146971;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.FishInOcean-dark-calculation-label .value {
+    color: #146971;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.FishInOcean-fishes {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    z-index: 10;
+}
+
+.FishInOcean-small_fishes {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    z-index: 10;
+}
+
+.FishInOcean-timer {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.FishInOcean-pearl-column {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+}
+
+.FishInOcean-egg-pearl {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.FishInOcean-egg {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    top: 72px;
+    left: 30px;
+}
+
+.FishInOcean-eggnumber {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Add these to your Homepage.css */
+
+.FishInOcean-kill-animation {
+    position: absolute;
+    z-index: 20;
+    animation: killEffect 1s forwards;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+@keyframes killEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.FishInOcean-game-over-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.FishInOcean-game-over-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: popIn 0.3s ease-out forwards;
+}
+
+.FishInOcean-game-over-content.win {
+    border: 4px solid #4CAF50;
+}
+
+.FishInOcean-FishInOcean-game-over-content.lose {
+    border: 4px solid #F44336;
+}
+
+.FishInOcean-game-over-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.FishInOcean-game-over-content button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.FishInOcean-game-over-content button:hover {
+    background-color: #0b7dda;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

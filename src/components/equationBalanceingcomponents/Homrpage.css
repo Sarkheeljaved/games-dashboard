@@ -1,0 +1,339 @@
+.balance-equation-cover {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.balance-equation-bgnd {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.balance-equation-bgnd .balance-equation-img {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Modal Styles */
+.balance-equation-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.balance-equation-modal-content {
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.balance-equation-modal-message {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.balance-equation-modal-details {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.balance-equation-modal-close-btn {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffc107;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.balance-equation-modal-close-btn:hover {
+    background-color: #e0a800;
+}
+
+.balance-equation-persons-container {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 0px;
+}
+
+.balance-equation-persons-container img {
+    width: 250px;
+    height: 250px;
+}
+
+.balance-equation-oldie-message-container {
+    position: relative;
+}
+
+.balance-equation-oldie-message-container .balance-equation-message {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-equation-oldie-message-container .balance-equation-message img {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.balance-equation-oldie-message-container .balance-equation-message .balance-equation-text {
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.balance-equation-balancer-cover {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.balance-equation-stand {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 300px;
+    margin-top: -27%;
+    margin-left: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.balance-equation-center-base-stand {
+    position: absolute;
+    height: 100%;
+    z-index: 4;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.balance-equation-stand .balance-equation-balance-Holder {
+    position: absolute;
+    z-index: 3;
+    width: 500px;
+    height: 100px;
+    top: 5%;
+    left: 0%;
+}
+
+.balance-equation-balance-left {
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 200px;
+    top: 73%;
+    left: -11%;
+}
+
+.balance-equation-balance-right {
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 200px;
+    top: 73%;
+    right: -11%;
+}
+
+.balance-equation-card-container {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.balance-equation-custom-card-with-value {
+    width: 100px;
+    height: 100px;
+}
+
+.balance-equation-custom-card-with-value img {
+    width: 100%;
+    height: 100%;
+}
+
+.balance-equation-balance-Holder {
+    transition: transform 0.85s ease;
+}
+
+.balance-equation-card-value {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.balance-equation-custom-card-with-value {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.balance-equation-left-balance-card-img .balance-equation-card-value,
+.balance-equation-right-balance-card-img .balance-equation-card-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.balance-equation-left-balance-card-img,
+.balance-equation-right-balance-card-img {
+    transition: all 0.balance-equation-5s ease;
+    position: relative;
+}
+
+.balance-equation-left-cards-container,
+.balance-equation-right-cards-container {
+    position: absolute;
+    bottom: -110px;
+    width: 200px;
+    height: 120px;
+}
+
+.balance-equation-left-cards-container {
+    left: -30px;
+}
+
+.balance-equation-right-cards-container {
+    right: -30px;
+}
+
+.balance-equation-left-balance-card-img {
+    position: absolute;
+    bottom: 0;
+}
+
+.balance-equation-right-balance-card-img {
+    position: absolute;
+    bottom: 0;
+}
+
+.balance-equation-left-balance-card-img:hover,
+.balance-equation-right-balance-card-img:hover {
+    transform: scale(1.1) !important;
+    z-index: 100 !important;
+}
+
+.balance-equation-weight-value {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    /* Slightly smaller to fit longer equations */
+    font-weight: bold;
+    min-width: max-content;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba0, 0, 0, 0.3;
+    white-space: nowrap;
+    /* Prevent line breaks */
+    max-width: 200px;
+    /* Limit width and handle overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Adjust positioning if needed */
+.balance-equation-center-weight-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* Take full width */
+    max-width: 400px;
+    /* Limit maximum width */
+    z-index: 10;
+    gap: 20px;
+    /* Space between equations */
+}
+
+.balance-equation-left-weight {
+    margin-right: 10px;
+}
+
+.balance-equation-right-weight {
+    margin-left: 10px;
+}

@@ -1,0 +1,330 @@
+.wrapper-fight-page,
+.blurred {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.blurred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.provided-bullets {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.enemy-bullets {
+    position: fixed;
+    left: 20px;
+    top: 60px;
+    z-index: 1000;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.battle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myArmy-Boundary,
+.enemy-comming-Boundary {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.myArmy-Boundary {
+    align-items: flex-start;
+}
+
+.enemy-comming-Boundary {
+    align-items: flex-end;
+}
+
+.team-Alive {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border: 3px solid #F6A51C;
+    z-index: 1000;
+}
+
+.myarmy-Alive,
+.enemy-army-Alive {
+    width: 150px;
+    height: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.myarmy-Alive {
+    background-color: #27241F;
+}
+
+.enemy-army-Alive {
+    background-color: #D34131;
+}
+
+.vs {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.triangle-formation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    transition: transform 0.1s linear;
+}
+
+.triangle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.points-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 2px solid #F6A51C;
+}
+
+.my-points {
+    color: #4CAF50;
+}
+
+.enemy-points {
+    color: #f44336;
+}
+
+.soldier-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.soldier-wrapper.empty {
+    visibility: hidden;
+}
+
+.army,
+.enemy {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.army img.myarmy,
+.enemy img.enimy {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.destroyed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: contain;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.destroyed-soldier {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.start-battle-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.start-battle-btn:hover {
+    background-color: #45a049;
+}
+
+.battle-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    z-index: 1001;
+}
+
+.battle-result h2 {
+    color: #F6A51C;
+    margin-bottom: 20px;
+}
+
+.reset-battle-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reset-battle-btn:hover {
+    background-color: #45a049;
+}
+
+/* Projectile Styles */
+/* Add these styles to your CSS file */
+.armyfires {
+    width: 30px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+}
+
+.armyfires.firing {
+    opacity: 1;
+    animation: bulletFire 0.5s forwards;
+}
+
+.my-army-bullet {
+    right: 0;
+    top: calc(50% - 5px);
+    margin-right: -20px;
+}
+
+.my-enemy-bullet {
+    left: 0;
+    top: calc(50% - 5px);
+    margin-left: -20px;
+}
+
+@keyframes bulletFire {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+@keyframes hitFlash {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+  
+  .hit-effect {
+    width: 40px;
+    height: 40px;
+  }
+
+@media (max-width: 768px) {
+    .battle-container {
+        width: 95%;
+    }
+
+    .soldier-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .team-Alive {
+        width: 250px;
+    }
+
+    .myarmy-Alive,
+    .enemy-army-Alive {
+        width: 120px;
+    }
+}

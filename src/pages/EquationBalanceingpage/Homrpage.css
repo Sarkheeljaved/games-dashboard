@@ -1,0 +1,339 @@
+.phase-1-cover {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.phase-1-bgnd {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.phase-1-bgnd .phase-1-img {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Modal Styles */
+.phase-1-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.phase-1-modal-content {
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.phase-1-modal-message {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.phase-1-modal-details {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.phase-1-modal-close-btn {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffc107;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.phase-1-modal-close-btn:hover {
+    background-color: #e0a800;
+}
+
+.phase-1-persons-container {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 0px;
+}
+
+.phase-1-persons-container img {
+    width: 250px;
+    height: 250px;
+}
+
+.phase-1-oldie-message-container {
+    position: relative;
+}
+
+.phase-1-oldie-message-container .phase-1-message {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phase-1-oldie-message-container .phase-1-message img {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.phase-1-oldie-message-container .phase-1-message .phase-1-text {
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.phase-1-balancer-cover {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.phase-1-stand {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 300px;
+    margin-top: -27%;
+    margin-left: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.vcenter-base-stand {
+    position: absolute;
+    height: 100%;
+    z-index: 4;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.phase-1-stand .phase-1-balance-Holder {
+    position: absolute;
+    z-index: 3;
+    width: 500px;
+    height: 100px;
+    top: 5%;
+    left: 0%;
+}
+
+.phase-1-balance-left {
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 200px;
+    top: 73%;
+    left: -11%;
+}
+
+.phase-1-balance-right {
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    height: 200px;
+    top: 73%;
+    right: -11%;
+}
+
+.phase-1-card-container {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.phase-1-custom-card-with-value {
+    width: 100px;
+    height: 100px;
+}
+
+.phase-1-custom-card-with-value img {
+    width: 100%;
+    height: 100%;
+}
+
+.phase-1-balance-Holder {
+    transition: transform 0.5s ease;
+}
+
+.phase-1-card-value {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.phase-1-custom-card-with-value {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.phase-1-left-balance-card-img .phase-1-card-value,
+.phase-1-right-balance-card-img .phase-1-card-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.phase-1-left-balance-card-img,
+.phase-1-right-balance-card-img {
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.phase-1-left-cards-container,
+.phase-1-right-cards-container {
+    position: absolute;
+    bottom: -110px;
+    width: 200px;
+    height: 120px;
+}
+
+.phase-1-left-cards-container {
+    left: -30px;
+}
+
+.phase-1-right-cards-container {
+    right: -30px;
+}
+
+.phase-1-left-balance-card-img {
+    position: absolute;
+    bottom: 0;
+}
+
+.phase-1-right-balance-card-img {
+    position: absolute;
+    bottom: 0;
+}
+
+.phase-1-left-balance-card-img:hover,
+.phase-1-right-balance-card-img:hover {
+    transform: scale(1.1) !important;
+    z-index: 100 !important;
+}
+
+.phase-1-weight-value {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    /* Slightly smaller to fit longer equations */
+    font-weight: bold;
+    min-width: max-content;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    /* Prevent line breaks */
+    max-width: 200px;
+    /* Limit width and handle overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Adjust positioning if needed */
+.phase-1-center-weight-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* Take full width */
+    max-width: 400px;
+    /* Limit maximum width */
+    z-index: 10;
+    gap: 20px;
+    /* Space between equations */
+}
+
+.phase-1-left-weight {
+    margin-right: 10px;
+}
+
+.phase-1-right-weight {
+    margin-left: 10px;
+}
