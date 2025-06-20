@@ -369,7 +369,7 @@ const Homepage: React.FC = () => {
     <DndProvider backend={HTML5Backend}>
       <div className="solving-equation-wrapper">
         <div className="solving-equation-cover">
-          <img src="/background.svg" alt="" />
+          <img src="/solving-equation-background.svg" alt="" />
         </div>
 
         <div className="solving-equation-board">
